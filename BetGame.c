@@ -15,7 +15,6 @@
 
 //Global variable
 int virtualCash = 100;
-int abortFlag = 0;
 
 //shuffing function
 void shuffing()
@@ -133,15 +132,15 @@ void withdrawCash(int signum)
     }
     else 
     {
-        printf("Gracefully existing...\n");
-        abortFlag = 1;
+        printf("Game Over!\n");
+        exit(1);
     }
 }
 
 int main()
 {
     printf("**Welcome to Betting Casino**\n");
-    printf("Total cash %d\n", virtualCash);
+    printf("Total cash %d$\n", virtualCash);
 
     signal(SIGINT, withdrawCash);
     gameLoop();
