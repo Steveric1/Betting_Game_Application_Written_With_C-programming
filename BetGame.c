@@ -154,7 +154,7 @@ int main()
             scanf(" %c", &playGame);
             if (playGame == 'y' || playGame == 'Y')
             {
-                printf("Make a deposit to continue playing\n");
+                printf("Make a deposit to continue playing: ");
                 scanf("%d", &virtualCash);
                 gameLoop(virtualCash);
             }
