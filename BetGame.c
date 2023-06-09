@@ -30,7 +30,7 @@ void shuffing()
     for (int i = 0; i < 10; i++) {
         printf("%s\r", frames[i % numFrames]);
         fflush(stdout);
-        usleep(500000);  // Sleep for 0.5 seconds
+        usleep(50000);  // Sleep for 0.5 seconds
     }
 
     printf("\n");
